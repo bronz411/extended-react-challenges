@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import SideBar from "./components/SideBar";
 import Superheroes from "./components/pages/Superheroes";
+import Pokemon from "./components/pages/Pokemon";
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/superheroes" element={<Superheroes />} />
+              <Route path="/pokemon" element={<Pokemon />} />
             </Routes>
           </Col>
         </Row>

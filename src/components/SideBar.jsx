@@ -11,6 +11,9 @@ const SideBar = (props) => {
         <ListGroupItem>
           <NavLink to={"/superheroes"}>Super Heroes</NavLink>
         </ListGroupItem>
+        <ListGroupItem>
+          <NavLink to={"/pokemon"}>Pokemon</NavLink>
+        </ListGroupItem>
       </ListGroup>
     </>
   );

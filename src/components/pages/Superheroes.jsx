@@ -25,6 +25,10 @@ const Superheroes = (props) => {
           they start typing in batman nothing should show up.
         </li>
       </ul>
+      <div className="alert alert-danger">
+        In the <b>src/assets</b> folder you will find an image of what we are
+        looking for.
+      </div>
       {/* Mount New Component Below this Comment */}
     </>
   );
