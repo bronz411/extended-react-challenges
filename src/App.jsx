@@ -5,6 +5,8 @@ import Home from "./components/pages/Home";
 import SideBar from "./components/SideBar";
 import Superheroes from "./components/pages/Superheroes";
 import Pokemon from "./components/pages/Pokemon";
+import UseContextExample from "./components/pages/UseContextExample";
+import UserContextProvider from "./components/store/UserContent";
 function App() {
   return (
     <div>
@@ -15,11 +17,18 @@ function App() {
             <SideBar />
           </Col>
           <Col md="9">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/superheroes" element={<Superheroes />} />
-              <Route path="/pokemon" element={<Pokemon />} />
-            </Routes>
+            <UserContextProvider>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                {/* <Route path="/superheroes" element={<Superheroes />} /> */}
+                <Route path="/pokemon" element={<Pokemon />} />
+                <Route path="/hello-world" element={<h1>Hello World</h1>} />
+                <Route
+                  path="/use-context-example"
+                  element={<UseContextExample />}
+                />
+              </Routes>
+            </UserContextProvider>
           </Col>
         </Row>
       </Container>

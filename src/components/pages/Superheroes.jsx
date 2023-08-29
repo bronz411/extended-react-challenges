@@ -1,3 +1,6 @@
+import SuperHeroesChallenge from "../SuperheroDisplay";
+import React, { useState } from "react";
+
 const Superheroes = (props) => {
   return (
     <>
@@ -30,6 +33,7 @@ const Superheroes = (props) => {
         looking for.
       </div>
       {/* Mount New Component Below this Comment */}
+      <SuperHeroesChallenge />
     </>
   );
 };
