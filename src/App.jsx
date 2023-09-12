@@ -7,6 +7,8 @@ import Superheroes from "./components/pages/Superheroes";
 import Pokemon from "./components/pages/Pokemon";
 import UseContextExample from "./components/pages/UseContextExample";
 import UserContextProvider from "./components/store/UserContent";
+import BornToCodeMap from "./components/pages/BornToCodeMap";
+import "./App.css";
 function App() {
   return (
     <div>
@@ -19,6 +21,7 @@ function App() {
           <Col md="9">
             <UserContextProvider>
               <Routes>
+                <Route path="/map" element={<BornToCodeMap />} />
                 <Route path="/" element={<Home />} />
                 {/* <Route path="/superheroes" element={<Superheroes />} /> */}
                 <Route path="/pokemon" element={<Pokemon />} />
@@ -27,6 +30,7 @@ function App() {
                   path="/use-context-example"
                   element={<UseContextExample />}
                 />
+                <Route path="/map/:studentName" element={<BornToCodeMap />} />
               </Routes>
             </UserContextProvider>
           </Col>
